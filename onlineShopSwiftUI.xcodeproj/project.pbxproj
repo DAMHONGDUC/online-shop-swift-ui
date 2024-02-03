@@ -41,6 +41,8 @@
 		6969DD2E2B6E23F6001195F8 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6969DD142B6E23F6001195F8 /* Inter-Black.ttf */; };
 		6969DD2F2B6E23F6001195F8 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6969DD142B6E23F6001195F8 /* Inter-Black.ttf */; };
 		6969DD372B6E2CAE001195F8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969DD362B6E2CAE001195F8 /* WelcomeView.swift */; };
+		6969DD392B6E2DFC001195F8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6969DD382B6E2DFC001195F8 /* Launch Screen.storyboard */; };
+		6969DD3B2B6E30EB001195F8 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6969DD3A2B6E30EB001195F8 /* UIExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		6969DD142B6E23F6001195F8 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		6969DD302B6E2AC6001195F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6969DD362B6E2CAE001195F8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		6969DD382B6E2DFC001195F8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6969DD3A2B6E30EB001195F8 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 				6969DCE02B6E129C001195F8 /* onlineShopSwiftUIApp.swift */,
 				6969DCE42B6E129D001195F8 /* Assets.xcassets */,
 				6969DCE62B6E129D001195F8 /* Preview Content */,
+				6969DD382B6E2DFC001195F8 /* Launch Screen.storyboard */,
 			);
 			path = onlineShopSwiftUI;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		6969DD342B6E2C28001195F8 /* UICommon */ = {
 			isa = PBXGroup;
 			children = (
+				6969DD3A2B6E30EB001195F8 /* UIExtension.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				6969DD272B6E23F6001195F8 /* Inter-Bold.ttf in Resources */,
 				6969DCE52B6E129D001195F8 /* Assets.xcassets in Resources */,
 				6969DD242B6E23F6001195F8 /* Inter-Thin.ttf in Resources */,
+				6969DD392B6E2DFC001195F8 /* Launch Screen.storyboard in Resources */,
 				6969DD2D2B6E23F6001195F8 /* Inter-Black.ttf in Resources */,
 				6969DD2A2B6E23F6001195F8 /* Inter-Regular.ttf in Resources */,
 				6969DD182B6E23F6001195F8 /* Inter-Light.ttf in Resources */,
@@ -380,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6969DD372B6E2CAE001195F8 /* WelcomeView.swift in Sources */,
+				6969DD3B2B6E30EB001195F8 /* UIExtension.swift in Sources */,
 				6969DCE12B6E129C001195F8 /* onlineShopSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,8 +558,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,9 +570,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = duc.onlineShopSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -579,8 +593,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,9 +605,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = duc.onlineShopSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
