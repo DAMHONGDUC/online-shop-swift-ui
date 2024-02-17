@@ -11,7 +11,19 @@ struct WelcomeView: View {
     var body: some View {
         ZStack{
             Image("welcome_bg").resizable().scaledToFill().frame(width: .screenWidth, height: .screenHeight)
+            
+            VStack{
+                Image("app_logo")
+                
+                Text("Welcome\nto our store")
+                    .font(.customfont(.semibold, fontSize: 50))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+            }
+            
+           
         }.ignoresSafeArea()
+        
     }
 }
 
