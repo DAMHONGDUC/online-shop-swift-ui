@@ -24,21 +24,15 @@ struct WelcomeView: View {
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center).padding(.bottom,8)
                 
-                Text("Get your order in one hours").font(.customfont(.semibold, fontSize: 16)).foregroundColor(.white.opacity(0.8)).multilineTextAlignment(.center).padding(.bottom, 48)
+                Text("Get your order in one hours").font(.customfont(.semibold, fontSize: 16)).foregroundColor(.white.opacity(0.8)).multilineTextAlignment(.center).padding(.bottom, 24)
+                
+                RoundButton(title: "Get Started")
+                
+                Spacer().frame(height: 64)
             }.padding(.horizontal, 24)
             
             
         }.ignoresSafeArea()
-        
-        //        ZStack{
-        //            Image("welcome_bg").resizable().scaledToFill().frame(width: .screenWidth, height: .screenHeight)
-        //
-        //            VStack{
-        //
-        //                Image("app_logo")
-        //            }
-        //
-        //        }.ignoresSafeArea()
     }
 }
 
