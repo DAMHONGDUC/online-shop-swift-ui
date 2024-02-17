@@ -10,20 +10,35 @@ import SwiftUI
 struct WelcomeView: View {
     var body: some View {
         ZStack{
+            
             Image("welcome_bg").resizable().scaledToFill().frame(width: .screenWidth, height: .screenHeight)
             
-            VStack{
-                Image("app_logo")
+            VStack(alignment: .center){
+                
+                Spacer()
+                
+                Image("app_logo").resizable().scaledToFill().frame(width: 64, height: 64).padding(.bottom, 8)
                 
                 Text("Welcome\nto our store")
-                    .font(.customfont(.semibold, fontSize: 50))
+                    .font(.customfont(.semibold, fontSize: 40))
                     .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-            }
+                    .multilineTextAlignment(.center).padding(.bottom,8)
+                
+                Text("Get your order in one hours").font(.customfont(.semibold, fontSize: 16)).foregroundColor(.white.opacity(0.8)).multilineTextAlignment(.center).padding(.bottom, 48)
+            }.padding(.horizontal, 24)
             
-           
+            
         }.ignoresSafeArea()
         
+        //        ZStack{
+        //            Image("welcome_bg").resizable().scaledToFill().frame(width: .screenWidth, height: .screenHeight)
+        //
+        //            VStack{
+        //
+        //                Image("app_logo")
+        //            }
+        //
+        //        }.ignoresSafeArea()
     }
 }
 
